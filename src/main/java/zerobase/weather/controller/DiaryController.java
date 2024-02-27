@@ -17,6 +17,9 @@ import zerobase.weather.service.DiaryService;
 
 import java.time.LocalDate;
 import java.util.List;
+import zerobase.weather.service.DiaryService;
+
+import java.time.LocalDate;
 
 @RestController
 public class DiaryController {
@@ -27,6 +30,7 @@ public class DiaryController {
     }
 
     @PostMapping("/create/diary")
+<<<<<<< HEAD
     void createDiary(@RequestParam @DateTimeFormat
             (iso = DateTimeFormat.ISO.DATE) LocalDate date,
                      @RequestBody String text) {
@@ -58,5 +62,8 @@ public class DiaryController {
     void deleteDiary(@RequestParam @DateTimeFormat
             (iso = DateTimeFormat.ISO.DATE) LocalDate date) {
         diaryService.deleteDiary(date);
+    }
+    void createDiary(@RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date, @RequestBody String text) {
+        diaryService.createDiary(date, text);
     }
 }
