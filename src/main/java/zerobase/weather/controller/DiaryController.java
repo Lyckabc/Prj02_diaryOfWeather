@@ -11,8 +11,11 @@ package zerobase.weather.controller;
 
 
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.ErrorResponse;
 import org.springframework.web.bind.annotation.*;
 import zerobase.weather.domain.Diary;
+import zerobase.weather.error.InvalidDate;
 import zerobase.weather.service.DiaryService;
 
 import java.time.LocalDate;
@@ -20,6 +23,7 @@ import java.util.List;
 import zerobase.weather.service.DiaryService;
 
 import java.time.LocalDate;
+
 
 @RestController
 public class DiaryController {
@@ -62,4 +66,7 @@ public class DiaryController {
             (iso = DateTimeFormat.ISO.DATE) LocalDate date) {
         diaryService.deleteDiary(date);
     }
+
+    //@ExceptionHandler(InvalidDate.class)
+    //ResponseEntity<ErrorResponse> handleLineException(final InvalidDate.class error) {}
 }
