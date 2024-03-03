@@ -1,4 +1,90 @@
-[2024-03-03 04:47:22:3575][main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+[2024-03-04 07:08:05:1187][main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.TypeNotPresentException: Type javax.servlet.http.HttpServletRequest not present
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117)
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125)
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at java.base/sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68)
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138)
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at java.base/sun.reflect.generics.repository.ClassRepository.computeSuperInterfaces(ClassRepository.java:117)
+	at java.base/sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:95)
+	at java.base/java.lang.Class.getGenericInterfaces(Class.java:1211)
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:517)
+	at org.springframework.core.ResolvableType.as(ResolvableType.java:465)
+	at org.springframework.core.ResolvableType.forClass(ResolvableType.java:1093)
+	at org.springframework.plugin.core.config.PluginRegistriesBeanDefinitionRegistrar.getTargetType(PluginRegistriesBeanDefinitionRegistrar.java:101)
+	at org.springframework.plugin.core.config.PluginRegistriesBeanDefinitionRegistrar.registerBeanDefinitions(PluginRegistriesBeanDefinitionRegistrar.java:71)
+	at org.springframework.context.annotation.ImportBeanDefinitionRegistrar.registerBeanDefinitions(ImportBeanDefinitionRegistrar.java:86)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:376)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:375)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:148)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:428)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at zerobase.weather.WeatherApplication.main(WeatherApplication.java:14)
+Caused by: java.lang.ClassNotFoundException: javax.servlet.http.HttpServletRequest
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:467)
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
+	... 32 common frames omitted
+[2024-03-04 07:14:34:944][main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.TypeNotPresentException: Type javax.servlet.http.HttpServletRequest not present
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117)
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125)
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at java.base/sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68)
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138)
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at java.base/sun.reflect.generics.repository.ClassRepository.computeSuperInterfaces(ClassRepository.java:117)
+	at java.base/sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:95)
+	at java.base/java.lang.Class.getGenericInterfaces(Class.java:1211)
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:517)
+	at org.springframework.core.ResolvableType.as(ResolvableType.java:465)
+	at org.springframework.core.ResolvableType.forClass(ResolvableType.java:1093)
+	at org.springframework.plugin.core.config.PluginRegistriesBeanDefinitionRegistrar.getTargetType(PluginRegistriesBeanDefinitionRegistrar.java:101)
+	at org.springframework.plugin.core.config.PluginRegistriesBeanDefinitionRegistrar.registerBeanDefinitions(PluginRegistriesBeanDefinitionRegistrar.java:71)
+	at org.springframework.context.annotation.ImportBeanDefinitionRegistrar.registerBeanDefinitions(ImportBeanDefinitionRegistrar.java:86)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:376)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:375)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:148)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:428)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at zerobase.weather.WeatherApplication.main(WeatherApplication.java:14)
+Caused by: java.lang.ClassNotFoundException: javax.servlet.http.HttpServletRequest
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:467)
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
+	... 32 common frames omitted
+[2024-03-04 07:15:56:3653][main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
 
 ***************************
 APPLICATION FAILED TO START
@@ -11,4 +97,109 @@ Web server failed to start. Port 8080 was already in use.
 Action:
 
 Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+[2024-03-04 08:04:02:3497][main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springdoc.core.configuration.SpringDocConfiguration.objectMapperProvider(SpringDocConfiguration.java:441)
+
+The following method did not exist:
+
+    'void org.springdoc.core.providers.ObjectMapperProvider.<init>(org.springdoc.core.properties.SpringDocConfigProperties)'
+
+The calling method's class, org.springdoc.core.configuration.SpringDocConfiguration, was loaded from the following location:
+
+    jar:file:/C:/Users/Toji/.gradle/caches/modules-2/files-2.1/org.springdoc/springdoc-openapi-starter-common/2.0.3/f87e5135e805651fca9a118ba63683b7a8a8223c/springdoc-openapi-starter-common-2.0.3.jar!/org/springdoc/core/configuration/SpringDocConfiguration.class
+
+The called method's class, org.springdoc.core.providers.ObjectMapperProvider, is available from the following locations:
+
+    jar:file:/C:/Users/Toji/.gradle/caches/modules-2/files-2.1/org.springdoc/springdoc-openapi-common/1.6.14/cdabcf881c4509206738115ef7d4b01e348c14e7/springdoc-openapi-common-1.6.14.jar!/org/springdoc/core/providers/ObjectMapperProvider.class
+    jar:file:/C:/Users/Toji/.gradle/caches/modules-2/files-2.1/org.springdoc/springdoc-openapi-starter-common/2.0.3/f87e5135e805651fca9a118ba63683b7a8a8223c/springdoc-openapi-starter-common-2.0.3.jar!/org/springdoc/core/providers/ObjectMapperProvider.class
+
+The called method's class hierarchy was loaded from the following locations:
+
+    org.springdoc.core.providers.ObjectMapperProvider: file:/C:/Users/Toji/.gradle/caches/modules-2/files-2.1/org.springdoc/springdoc-openapi-common/1.6.14/cdabcf881c4509206738115ef7d4b01e348c14e7/springdoc-openapi-common-1.6.14.jar
+    io.swagger.v3.core.util.ObjectMapperFactory: file:/C:/Users/Toji/.gradle/caches/modules-2/files-2.1/io.swagger.core.v3/swagger-core/2.2.7/beb4bda3494768f94ee1b8093b6cef779ef00717/swagger-core-2.2.7.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains compatible versions of the classes org.springdoc.core.configuration.SpringDocConfiguration and org.springdoc.core.providers.ObjectMapperProvider
+
+[2024-03-04 08:10:39:3453][main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springdoc.core.configuration.SpringDocConfiguration.objectMapperProvider(SpringDocConfiguration.java:441)
+
+The following method did not exist:
+
+    'void org.springdoc.core.providers.ObjectMapperProvider.<init>(org.springdoc.core.properties.SpringDocConfigProperties)'
+
+The calling method's class, org.springdoc.core.configuration.SpringDocConfiguration, was loaded from the following location:
+
+    jar:file:/C:/Users/Toji/.gradle/caches/modules-2/files-2.1/org.springdoc/springdoc-openapi-starter-common/2.0.3/f87e5135e805651fca9a118ba63683b7a8a8223c/springdoc-openapi-starter-common-2.0.3.jar!/org/springdoc/core/configuration/SpringDocConfiguration.class
+
+The called method's class, org.springdoc.core.providers.ObjectMapperProvider, is available from the following locations:
+
+    jar:file:/C:/Users/Toji/.gradle/caches/modules-2/files-2.1/org.springdoc/springdoc-openapi-common/1.6.14/cdabcf881c4509206738115ef7d4b01e348c14e7/springdoc-openapi-common-1.6.14.jar!/org/springdoc/core/providers/ObjectMapperProvider.class
+    jar:file:/C:/Users/Toji/.gradle/caches/modules-2/files-2.1/org.springdoc/springdoc-openapi-starter-common/2.0.3/f87e5135e805651fca9a118ba63683b7a8a8223c/springdoc-openapi-starter-common-2.0.3.jar!/org/springdoc/core/providers/ObjectMapperProvider.class
+
+The called method's class hierarchy was loaded from the following locations:
+
+    org.springdoc.core.providers.ObjectMapperProvider: file:/C:/Users/Toji/.gradle/caches/modules-2/files-2.1/org.springdoc/springdoc-openapi-common/1.6.14/cdabcf881c4509206738115ef7d4b01e348c14e7/springdoc-openapi-common-1.6.14.jar
+    io.swagger.v3.core.util.ObjectMapperFactory: file:/C:/Users/Toji/.gradle/caches/modules-2/files-2.1/io.swagger.core.v3/swagger-core/2.2.7/beb4bda3494768f94ee1b8093b6cef779ef00717/swagger-core-2.2.7.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains compatible versions of the classes org.springdoc.core.configuration.SpringDocConfiguration and org.springdoc.core.providers.ObjectMapperProvider
+
+[2024-03-04 08:12:45:3476][main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springdoc.core.configuration.SpringDocConfiguration.objectMapperProvider(SpringDocConfiguration.java:434)
+
+The following method did not exist:
+
+    'void org.springdoc.core.providers.ObjectMapperProvider.<init>(org.springdoc.core.properties.SpringDocConfigProperties)'
+
+The calling method's class, org.springdoc.core.configuration.SpringDocConfiguration, was loaded from the following location:
+
+    jar:file:/C:/Users/Toji/.gradle/caches/modules-2/files-2.1/org.springdoc/springdoc-openapi-starter-common/2.0.2/5f668e69d620c56db3ba9689d48d6b64e42235b9/springdoc-openapi-starter-common-2.0.2.jar!/org/springdoc/core/configuration/SpringDocConfiguration.class
+
+The called method's class, org.springdoc.core.providers.ObjectMapperProvider, is available from the following locations:
+
+    jar:file:/C:/Users/Toji/.gradle/caches/modules-2/files-2.1/org.springdoc/springdoc-openapi-common/1.6.14/cdabcf881c4509206738115ef7d4b01e348c14e7/springdoc-openapi-common-1.6.14.jar!/org/springdoc/core/providers/ObjectMapperProvider.class
+    jar:file:/C:/Users/Toji/.gradle/caches/modules-2/files-2.1/org.springdoc/springdoc-openapi-starter-common/2.0.2/5f668e69d620c56db3ba9689d48d6b64e42235b9/springdoc-openapi-starter-common-2.0.2.jar!/org/springdoc/core/providers/ObjectMapperProvider.class
+
+The called method's class hierarchy was loaded from the following locations:
+
+    org.springdoc.core.providers.ObjectMapperProvider: file:/C:/Users/Toji/.gradle/caches/modules-2/files-2.1/org.springdoc/springdoc-openapi-common/1.6.14/cdabcf881c4509206738115ef7d4b01e348c14e7/springdoc-openapi-common-1.6.14.jar
+    io.swagger.v3.core.util.ObjectMapperFactory: file:/C:/Users/Toji/.gradle/caches/modules-2/files-2.1/io.swagger.core.v3/swagger-core/2.2.7/beb4bda3494768f94ee1b8093b6cef779ef00717/swagger-core-2.2.7.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains compatible versions of the classes org.springdoc.core.configuration.SpringDocConfiguration and org.springdoc.core.providers.ObjectMapperProvider
 
